@@ -15,7 +15,7 @@ def done():
 
 @app.route('/choose')
 def modify():
-    client = boto3.client('s3', region_name='us-west-2')
+    client = boto3.client('s3')
     response = client.list_objects_v2(
     Bucket = 'projekt-psoir1',
     Prefix = 'uploads/'
